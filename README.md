@@ -84,11 +84,11 @@ Mengelompokkan pelanggan mall menjadi segmen-segmen berdasarkan **Annual Income*
 
 | Cluster | Profil | Keterangan |
 |---------|--------|------------|
-| High Income - High Spending | Target utama produk premium |
-| High Income - Low Spending | Perlu strategi marketing untuk meningkatkan spending |
-| Low Income - High Spending | Target untuk promosi dan diskon |
-| Low Income - Low Spending | Pasar potensial dengan strategi yang tepat |
-| Moderate | Segment middle-market, cocok untuk loyalty programs |
+| High Income - High Spending | Target utama produk premium | Customers with high purchasing power who actively spend |
+| High Income - Low Spending | Perlu strategi marketing untuk meningkatkan spending | High earners who are conservative spenders - need targeted campaigns |
+| Low Income - High Spending | Target untuk promosi dan diskon | Budget-conscious but active shoppers - responsive to deals |
+| Low Income - Low Spending | Pasar potensial dengan strategi yang tepat | Low engagement segment - requires creative marketing approach |
+| Moderate | Segment middle-market, cocok untuk loyalty programs | Stable middle segment - ideal for retention & loyalty programs |
 
 ---
 
