@@ -58,19 +58,37 @@ Mengelompokkan pelanggan mall menjadi segmen-segmen berdasarkan **Annual Income*
 
 ### 1. K-Means Clustering
 
-**Algoritma:** `sklearn.cluster.KMeans` (k-means++ init)
+**Algoritma:** `sklearn.cluster.KMeans` (k-means++ init, n_init=10)
 
 **Alur Kerja:**
-1. Load data, extract fitur Annual Income & Spending Score
-2. **Elbow Method** (k=1 s/d 10) - WCSS plot menunjukkan elbow di **k=5**
-3. Training K-Means dengan 5 cluster
-4. Visualisasi cluster & centroid
+1. Load data & EDA (statistik deskriptif, distribusi, scatter plot)
+2. **Feature Scaling** dengan `StandardScaler` (mean=0, std=1)
+3. **Elbow Method + Silhouette Score** side-by-side (k=2 s/d 10) - optimal **k=5**
+4. Training K-Means dengan 5 cluster & distribusi per cluster
+5. **Cluster Profiling** - label otomatis berdasarkan threshold Income & Spending
+6. Visualisasi: scatter plot + centroid, 3-panel (Income-Spending, Age-Income, Age-Spending)
+7. **Model Evaluation:** Silhouette Score + Davies-Bouldin Score per cluster
+8. **Silhouette Plot** per cluster
+9. **Perbandingan Init Method:** k-means++ vs random
+10. Kesimpulan & business insights
 
 **Hasil:**
 | Metrik | Nilai |
 |--------|-------|
 | Jumlah Cluster Optimal | **5** |
-| Davies-Bouldin Score | **0.573** (semakin rendah semakin baik) |
+| Init Method Terbaik | **k-means++** |
+| Silhouette Score | **~0.55** |
+| Davies-Bouldin Score | **~0.57** |
+
+**Profil Cluster:**
+
+| Cluster | Profil | Keterangan |
+|---------|--------|------------|
+| High Income - High Spending | Target utama produk premium |
+| High Income - Low Spending | Perlu strategi marketing untuk meningkatkan spending |
+| Low Income - High Spending | Target untuk promosi dan diskon |
+| Low Income - Low Spending | Pasar potensial dengan strategi yang tepat |
+| Moderate | Segment middle-market, cocok untuk loyalty programs |
 
 ---
 
